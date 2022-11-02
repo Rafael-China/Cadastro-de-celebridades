@@ -2,15 +2,20 @@
 #define CELEBRIDADES_H_
 
 // TODO: Declare aqui seu tipo de dados celebridade
-typedef struct Celebridade {
+typedef struct celebridade {
     // ...
-} Celebridade;
+    char nome[100];
+    int dia_nascimento;
+    int mes_nascimento;
+    int ano_nascimento;
+} celebridade;
 
-Celebridade le_celebridade();
-void exibe_celebridade(Celebridade c);
+celebridade le_celebridade();
 
-// O parâmetro cs é um arranjo de n celebridades
-void adiciona_celebridades(Celebridade *cs, int n);
-void exibe_celebridades(Celebridade *cs, int n);
+void exibe_celebridade(celebridade c);
+
+void adiciona_celebridades(celebridade *cs, int n);
+
+void exibe_celebridades(celebridade *cs, int n);
 
 #endif
